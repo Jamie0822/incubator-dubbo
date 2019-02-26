@@ -50,45 +50,23 @@ public abstract class AbstractConfig implements Serializable {
 
     protected static final Logger logger = LoggerFactory.getLogger(AbstractConfig.class);
     private static final long serialVersionUID = 4267533505537413570L;
-
-    /**
-     * The maximum length of a <b>parameter's value</b>
-     */
+    
+    // 属性值的格式校验
+    
     private static final int MAX_LENGTH = 200;
 
-    /**
-     * The maximum length of a <b>path</b>
-     */
     private static final int MAX_PATH_LENGTH = 200;
 
-    /**
-     * The rule qualification for <b>name</b>
-     */
     private static final Pattern PATTERN_NAME = Pattern.compile("[\\-._0-9a-zA-Z]+");
 
-    /**
-     * The rule qualification for <b>multiply name</b>
-     */
     private static final Pattern PATTERN_MULTI_NAME = Pattern.compile("[,\\-._0-9a-zA-Z]+");
 
-    /**
-     * The rule qualification for <b>method names</b>
-     */
     private static final Pattern PATTERN_METHOD_NAME = Pattern.compile("[a-zA-Z][0-9a-zA-Z]*");
 
-    /**
-     * The rule qualification for <b>path</b>
-     */
     private static final Pattern PATTERN_PATH = Pattern.compile("[/\\-$._0-9a-zA-Z]+");
 
-    /**
-     * The pattern matches a value who has a symbol
-     */
     private static final Pattern PATTERN_NAME_HAS_SYMBOL = Pattern.compile("[:*,\\s/\\-._0-9a-zA-Z]+");
 
-    /**
-     * The pattern matches a property key
-     */
     private static final Pattern PATTERN_KEY = Pattern.compile("[*,\\-._0-9a-zA-Z]+");
 
     /**
